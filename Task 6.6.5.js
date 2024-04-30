@@ -9,6 +9,10 @@ let Arr = [];
 
 for (key in obj) {
     Arr.push (obj[key]);
+    if (obj[key].isArray == true) {
+        obj[key] = obj[key].join (' ');
+        Arr.push (obj[key]);
+    }
 }
 
 console.log (Arr);
